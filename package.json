@@ -1,0 +1,23 @@
+{
+  "name": "skyreserve",
+  "version": "1.0.0",
+  "description": "Flight Ticket Booking System - MERN Stack",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server --prefix backend\" \"npm start --prefix frontend\"",
+    "server": "cd backend && npm start",
+    "client": "cd frontend && npm start",
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "setup": "node setup.js",
+    "start": "npm run setup && npm run install-all && npm run dev",
+    "quick-start": "node start-app.js",
+    "mui-start": "node start-mui-app.js",
+    "fix-start": "node fix-and-start.js"
+  },
+  "keywords": ["flight", "booking", "mern", "mongodb", "react", "express"],
+  "author": "SkyReserve Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

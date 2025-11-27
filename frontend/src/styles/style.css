@@ -1,0 +1,192 @@
+/* Minimal CSS - Material-UI handles most styling */
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* Custom animations for enhanced UX */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Smooth transitions for interactive elements */
+.MuiButton-root {
+  transition: all 0.2s ease !important;
+}
+
+.MuiCard-root {
+  transition: all 0.3s ease !important;
+}
+
+.MuiTextField-root {
+  transition: all 0.2s ease !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Print styles */
+@media print {
+  .MuiAppBar-root,
+  .MuiButton-root {
+    display: none !important;
+  }
+}
+
+/* Animated Hero Section Styles */
+@keyframes gradientShift {
+  0%, 100% {
+    background: `
+      radial-gradient(circle at 20% 20%, rgba(255, 56, 92, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(0, 166, 153, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 60%, rgba(255, 56, 92, 0.05) 0%, transparent 50%)
+    `;
+  }
+  50% {
+    background: `
+      radial-gradient(circle at 80% 20%, rgba(0, 166, 153, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 20% 80%, rgba(255, 56, 92, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 60% 40%, rgba(0, 166, 153, 0.05) 0%, transparent 50%)
+    `;
+  }
+}
+
+@keyframes flightPath1 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes flightPath2 {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  15%, 85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes planeMove {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes float1 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+@keyframes float2 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(-180deg);
+  }
+}
+
+@keyframes float3 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(90deg);
+  }
+}
+
+@keyframes gradientText {
+  0%, 100% {
+    background: linear-gradient(45deg, #FF385C, #00A699);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    background: linear-gradient(45deg, #00A699, #FF385C);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
